@@ -9,6 +9,7 @@ Each skill lives in its own directory under `skills/` and is shaped as a standar
 | skill | purpose | invocation |
 |---|---|---|
 | `smelly-prs` | Rank recently merged PRs of a GitHub repo by code-smell / process-smell heuristics. Read-only; never comments. | `/smelly-prs <owner/repo> [--limit N] [--since YYYY-MM-DD] [--base BRANCH]` |
+| `layered-review` | Review a single PR or local diff with a disciplined three-layer top-down pass: production impact → chunk-level meaning (SOLID/DRY/YAGNI) → surface fit (shallow methods, foreign patterns). Read-only. | `/layered-review <PR-url\|PR-number\|--diff>` |
 
 (More skills will land here as the workflow grows — e.g. release-readiness audits, refactor-candidate finders, on-call playbook helpers.)
 
