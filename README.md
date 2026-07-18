@@ -18,12 +18,17 @@ Each skill lives in its own directory under `skills/` and is shaped as a standar
 
 Two options. Pick one.
 
-### A. Plugin install (recommended once published)
+### A. Plugin marketplace (recommended)
+
+This repo is a Claude Code plugin marketplace (`.claude-plugin/marketplace.json`) exposing all skills as a single `dev-flow-skills` plugin.
 
 ```sh
 # inside Claude Code
-/plugin add github:mitubaEX/dev-flow-skills
+/plugin marketplace add mitubaEX/dev-flow-skills
+/plugin install dev-flow-skills@dev-flow-skills
 ```
+
+To pick up new skills later: `/plugin marketplace update dev-flow-skills`.
 
 ### B. Symlink (local, no plugin marketplace)
 

@@ -1,7 +1,12 @@
 {
   "name": "dev-flow-skills",
-  "description": "Personal Claude Code skills that codify software development methodology and team-flow practices (code review triage, refactor hunting, release hygiene, etc.).",
+  "displayName": "Dev Flow Skills",
+  "description": "Personal Claude Code skills that codify software development methodology and team-flow practices (code review triage, refactor hunting, release hygiene, plan-sharpening interviews, etc.).",
   "author": {
     "name": "mitubaEX"
-  }
+  },
+  "homepage": "https://github.com/mitubaEX/dev-flow-skills",
+  "repository": "https://github.com/mitubaEX/dev-flow-skills",
+  "license": "MIT",
+  "keywords": ["code-review", "pr-triage", "planning", "workflow"]
 }

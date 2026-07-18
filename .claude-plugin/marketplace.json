@@ -1,0 +1,14 @@
+{
+  "name": "dev-flow-skills",
+  "owner": {
+    "name": "mitubaEX"
+  },
+  "description": "Personal Claude Code skills for software-development methodology and team-flow practices",
+  "plugins": [
+    {
+      "name": "dev-flow-skills",
+      "source": "./",
+      "description": "Bundle of dev-flow skills: smelly-prs (PR merge-hygiene triage), grill-me / grilling (relentless plan-sharpening interview)"
+    }
+  ]
+}
