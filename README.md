@@ -14,8 +14,23 @@ Each skill lives in its own directory under `skills/` and is shaped as a standar
 | `grilling` | The interview engine behind `grill-me`; also auto-triggers on "grill" phrasing when you want your thinking stress-tested. | `/grilling` or automatic |
 | `prune` | Strip a feature, spec, UI, plan, diff, or PR down to what the request and its real user need. Four lenses — product scope, user experience, code design, delivery — each unit labelled required / load-bearing / speculative / ornamental, then a cut list and a deferred list. Also a silent stance while building. Read-only. | `/prune [--diff \| <PR-url\|PR-number> \| <spec / plan text>]` or automatic on "keep it simple" / "作りこみすぎ" / "削ぎ落として" phrasing |
 | `worth-it` | Gate before implementing: separates the problem from the requested solution, checks whether it is observed or imagined, runs the do-nothing / existing-means / smallest-move tests, and returns one verdict — Don't / Already covered / Smaller / Later / Build — with what would flip it. Read-only; never implements. Upstream of `prune` and `grill-me`. | `/worth-it [<task \| ticket \| issue-url \| plan text>]` or automatic on "本当に必要?" / "is this worth doing?" phrasing |
+| `autoloop` | Unattended dev loop over a backlog file (`.autoloop/backlog.md`): each iteration picks one task, gates it with `worth-it`, self-grills the design, trims with `prune`, implements red → green on an `autoloop/<slug>` branch, self-reviews with `layered-review`, and opens a PR. Never merges; tasks it should not or cannot do are marked skipped `[-]` or blocked `[!]` with the reason. Stops on an empty backlog, 5 tasks, or 2 consecutive failures. | `/loop /autoloop` (or `/autoloop [backlog-path]` for one iteration) |
 
 (More skills will land here as the workflow grows — e.g. release-readiness audits, refactor-candidate finders, on-call playbook helpers.)
+
+## Running the autonomous loop
+
+`autoloop` chains the other skills into a loop that needs no human input between tasks.
+
+```sh
+echo .autoloop/ >> .git/info/exclude
+mkdir -p .autoloop && cat > .autoloop/backlog.md <<'MD'
+- [ ] Add a header row to the CSV export
+- [ ] Show the retry count in the sync error toast
+MD
+```
+
+Let `git`, `gh pr create`, and your test runner run without prompts (auto mode or `permissions.allow` in `.claude/settings.json`), then start it inside Claude Code with `/loop /autoloop`. Progress is logged to `.autoloop/log.md`. Your part: add `[ ]` tasks, answer `[!]` questions (then flip them back to `[ ]`), merge the PRs.
 
 ## Install
 
