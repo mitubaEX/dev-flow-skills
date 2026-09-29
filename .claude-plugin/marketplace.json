@@ -8,7 +8,7 @@
     {
       "name": "dev-flow-skills",
       "source": "./",
-      "description": "Bundle of dev-flow skills: smelly-prs (PR merge-hygiene triage), layered-review (three-layer single-PR review), grill-me / grilling (relentless plan-sharpening interview), worth-it (is this work necessary at all?), prune (strip scope / UX / code / delivery down to what the request needs)"
+      "description": "Bundle of dev-flow skills: smelly-prs (PR merge-hygiene triage), layered-review (three-layer single-PR review), grill-me / grilling (relentless plan-sharpening interview), worth-it (is this work necessary at all?), prune (strip scope / UX / code / delivery down to what the request needs), autoloop (unattended backlog → PR loop driven by /loop)"
     }
   ]
 }

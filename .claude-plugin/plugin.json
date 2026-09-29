@@ -8,5 +8,5 @@
   "homepage": "https://github.com/mitubaEX/dev-flow-skills",
   "repository": "https://github.com/mitubaEX/dev-flow-skills",
   "license": "MIT",
-  "keywords": ["code-review", "pr-triage", "planning", "workflow", "prune", "yagni", "simplicity", "scope"]
+  "keywords": ["code-review", "pr-triage", "planning", "workflow", "prune", "yagni", "simplicity", "scope", "autoloop", "autonomous"]
 }
